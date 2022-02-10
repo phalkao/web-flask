@@ -1,0 +1,7 @@
+name: web-flask
+image: phalkao/web-flask:latest
+command: yarn start
+sync:
+  # - .:/usr/src/app
+persistentVolume:
+  enabled: false
