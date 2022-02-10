@@ -1,0 +1,4 @@
+backup/
+venv/
+tools/
+k3d/

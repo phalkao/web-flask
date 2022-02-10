@@ -7,9 +7,12 @@ cursor = conn.cursor()
 cursor.execute("""
     CREATE TABLE empregados (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-        nome TEXT NOT NULL,
-        cargo TEXT,
-        salario REAL
+        nome TEXT(200) NOT NULL ,
+        nascimento TEXT(10),
+        sexo TEXT(1),
+        cargo TEXT(100),
+        salario REAL,
+        cadastro TEXT(10)
     );
 """)
 
