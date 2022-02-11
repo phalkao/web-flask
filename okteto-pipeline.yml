@@ -1,5 +1,5 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:
-  - okteto build -t phalkao/web-flask:latest app
+  - okteto build -t phalkao/web-flask:${OKTETO_GIT_COMMIT} app
 devs:
   - okteto.yml
