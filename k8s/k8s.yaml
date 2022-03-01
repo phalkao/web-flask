@@ -30,4 +30,4 @@ spec:
   - protocol: TCP
     port: 5000
     nodePort: 30000
-  type: LoadBalancer
+  type: ClusterIP
