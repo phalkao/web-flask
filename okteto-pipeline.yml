@@ -1,5 +1,0 @@
-icon: https://apps.okteto.com/movies/icon.png
-deploy:
-  - okteto build -t phalkao/web-flask:latest
-devs:
-  - okteto.yml
