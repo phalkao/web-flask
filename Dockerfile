@@ -1,8 +1,6 @@
 # start by pulling the python image
 FROM python:3.8-alpine
 
-COPY k8s.yaml /
-
 # switch working directory
 WORKDIR /app
 
