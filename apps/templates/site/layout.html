@@ -51,29 +51,19 @@
 			<nav id="navbar" class="navbar">
 				<ul>
 				<li><a class="active " href="{{ url_for('home') }}">Home</a></li>
-				<!-- <li><a href="about.html">About</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="team.html">Team</a></li>
-				<li><a href="blog.html">Blog</a></li> -->
+				<li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
 				<li class="dropdown"><a href="#"><span>API's</span> <i class="bi bi-chevron-down"></i></a>
 					<ul>
-					<li><a href="#">Drop Down 1</a></li>
-					<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+					<li class="dropdown"><a href="#"><span>Documentação</span> <i class="bi bi-chevron-right"></i></a>
 						<ul>
-						<li><a href="#">Deep Drop Down 1</a></li>
-						<li><a href="#">Deep Drop Down 2</a></li>
-						<li><a href="#">Deep Drop Down 3</a></li>
-						<li><a href="#">Deep Drop Down 4</a></li>
-						<li><a href="#">Deep Drop Down 5</a></li>
+							<li><a href="doc-ui"> API Doc</a></li>
+							<li><a href="doc"> API Doc JSON</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Drop Down 2</a></li>
-					<li><a href="#">Drop Down 3</a></li>
-					<li><a href="#">Drop Down 4</a></li>
+					<li><a href="empregados">Lista de Empregados</a></li>
 					</ul>
 				</li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="contact.html">Contato</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
@@ -88,8 +78,8 @@
 			<!-- Slide 1 -->
 			<div class="carousel-item active">
 				<div class="carousel-container">
-				<h2 class="animate__animated animate__fadeInDown">Welcome to <span>Moderna</span></h2>
-				<p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+				<h2 class="animate__animated animate__fadeInDown">Bem vindo ao <span>Flask</span></h2>
+				<p class="animate__animated animate__fadeInUp">Este é um exemplo desenvolvido em Flask Microframework para testar o uso em um ambiente Kubernetes, apesar de simples, o site possuí conexão com banco de dados e utiliza APIs Rest para a manipulação dos dados.</p>
 				<a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
 				</div>
 			</div>

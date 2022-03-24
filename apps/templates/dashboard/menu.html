@@ -1,0 +1,14 @@
+{% extends "dashboard/layout.html" %}
+{% block menu %}
+    <li id="main-menu">
+        <ul class="sidebar-menu">
+            <li class="treeview"><a href="admin/integracoes/integracoes/" data-menu-tree="menuIntegracoes">
+                <i class="fa fa-snowflake-o"></i><span class="position-Word">Integrações</span><span class="fa-angle-left icon-Arrow-left-o pull-right"></span></a>
+                <ul class="treeview-menu">
+                    <li class="treeview"><a href="admin/integracoes/webhooks/" data-menu-tree="menuWebhooks"><i class="icon-Pos"></i><span class="position-Word">Webhooks</span></a></li>
+                    <li class="treeview"><a href="admin/integracoes/novo/" data-menu-tree="menuNovo"><i class="icon-Pos"></i><span class="position-Word">Novo</span></a></li></ul></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+{% endblock %}

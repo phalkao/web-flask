@@ -1,5 +1,7 @@
 # start by pulling the python image
 FROM python:3.8-alpine
+# FROM python:3.9
+
 
 # switch working directory
 WORKDIR /app
@@ -8,7 +10,8 @@ WORKDIR /app
 COPY ./requirements.txt .
 
 # install the dependencies and packages in the requirements file
-RUN pip install -r requirements.txt
+RUN python -m pip install --upgrade pip
+RUN python -m pip install --no-cache-dir -r requirements.txt
 
 # copy every content from the local file to the image
 COPY . /app
@@ -20,6 +23,7 @@ EXPOSE 5000
 ENTRYPOINT [ "python" ]
 
 # command to execute
-CMD ["app.py" ]
+CMD ["run.py" ]
 
-# CMD ["gunicorn", "--workers=3". "--bind", "0.0.0.0:5000", "app:app"]
+# gunicorn
+# CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]

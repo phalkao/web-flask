@@ -1,0 +1,15 @@
+{% extends "dashboard/menu.html" %}
+{% block head %}
+  {{ super() }}
+  <style type=text/css>
+    .title { 
+      background-image: url({{ url_for('static', filename='img/title.jpg') }}); 
+    }
+  </style>
+{% endblock %}
+{% block body_title %}
+  <h1 class="title"><span>Flask Community - Test</span></h1>
+{% endblock %}
+{% block body %}
+    <h1>dada</h1>
+{% endblock %}

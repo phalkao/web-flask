@@ -1,0 +1,40 @@
+<!doctype html>
+{% block head %}
+    <title>{% block title %}Welcome{% endblock %} | Flask (A Python Microframework)</title>
+    <meta charset=utf-8>
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Google jQuery CDN -->
+    <script type=text/javascript src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+{% endblock %}
+<div class=box>
+    {% block body_title %}
+        <h1><span>{{ self.title() }}z</span></h1>
+    {% endblock %}
+    <p class=nav>
+        <a href="general.index">overview</a> //
+    {% for message in get_flashed_messages() %}
+        <p class=message>{{ message }}
+    {% endfor %}
+    {% block menu %}{% endblock %}
+    {% block body %}{% endblock %}
+    <p class=footer>
+        &copy; Copyright 1998 - {{ current_year }} by <a href=https://phalkao.com.br />Phalkão</a>
+</div>
+
+        
+
+
+
+
+
+
+
+
