@@ -32,21 +32,34 @@ spec:
   type: LoadBalancer
 
 ---
-apiVersion: v1
-kind: PersistentVolume
 metadata:
-  name: pv0003
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/gce-pd
+    volume.kubernetes.io/selected-node: gke-cloud-dev-f-1-422de127-1t0a
+  creationTimestamp: "2022-03-20T14:06:42Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: web
+    component: master
+  name: data-storage
+  namespace: phalkao
+  resourceVersion: "765427169"
+  uid: f7e49c4e-bb98-4c15-bf3c-505e0c990d85
 spec:
-  capacity:
-    storage: 1Gi
-  volumeMode: Filesystem
   accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Recycle
-  storageClassName: slow
-  mountOptions:
-    - hard
-    - nfsvers=4.1
-  nfs:
-    path: /tmp
-    server: 172.17.0.2
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: okteto-standard
+  volumeMode: Filesystem
+  volumeName: pvc-f7e49c4e-bb98-4c15-bf3c-505e0c990d85
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  phase: Bound
