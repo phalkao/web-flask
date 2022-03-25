@@ -31,30 +31,3 @@ spec:
     port: 5000
   type: LoadBalancer
 
----
-metadata:
-  annotations:
-    pv.kubernetes.io/bind-completed: "yes"
-    pv.kubernetes.io/bound-by-controller: "yes"
-    volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/gce-pd
-    volume.kubernetes.io/selected-node: gke-cloud-dev-f-1-422de127-1t0a
-  finalizers:
-  - kubernetes.io/pvc-protection
-  labels:
-    app: web
-    component: master
-  name: data-storage
-  namespace: phalkao
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 2Gi
-  volumeMode: Filesystem
-status:
-  accessModes:
-  - ReadWriteOnce
-  capacity:
-    storage: 2Gi
-  phase: Bound
