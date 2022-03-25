@@ -38,7 +38,6 @@ metadata:
     pv.kubernetes.io/bound-by-controller: "yes"
     volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/gce-pd
     volume.kubernetes.io/selected-node: gke-cloud-dev-f-1-422de127-1t0a
-  creationTimestamp: "2022-03-20T14:06:42Z"
   finalizers:
   - kubernetes.io/pvc-protection
   labels:
@@ -46,17 +45,13 @@ metadata:
     component: master
   name: data-storage
   namespace: phalkao
-  resourceVersion: "765427169"
-  uid: f7e49c4e-bb98-4c15-bf3c-505e0c990d85
 spec:
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
       storage: 2Gi
-  storageClassName: okteto-standard
   volumeMode: Filesystem
-  volumeName: pvc-f7e49c4e-bb98-4c15-bf3c-505e0c990d85
 status:
   accessModes:
   - ReadWriteOnce
