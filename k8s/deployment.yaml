@@ -35,18 +35,18 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: web
+  name: pv0003
 spec:
   capacity:
-   storage: 1Gi
+    storage: 1Gi
   volumeMode: Filesystem
   accessModes:
-   - ReadWriteOnce
+    - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   storageClassName: slow
   mountOptions:
-   - hard
-   - nfsvers=4.1
+    - hard
+    - nfsvers=4.1
   nfs:
-   path: /tmp
-   server: 172.17.0.2  
+    path: /tmp
+    server: 172.17.0.2
