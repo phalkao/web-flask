@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: meudeployment
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: web
@@ -30,3 +30,23 @@ spec:
   - protocol: TCP
     port: 5000
   type: LoadBalancer
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0001
+spec:
+  capacity:
+   storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+   - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: slow
+  mountOptions:
+   - hard
+   - nfsvers=4.1
+  nfs:
+   path: /tmp
+   server: 172.17.0.2  
